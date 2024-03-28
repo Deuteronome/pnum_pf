@@ -1,0 +1,198 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Programme{% endblock %}
+
+{% block main %}
+    <div class="container-fluid p-0" >
+        <section class="row justify-content-evenly p-lg-5 p-3 border-bottom border-top home-part" id="part2">
+            <h1 class="col-12 text-center h2 ft-bold mt-5">Les ateliers techniques</h1>
+            <div class="col-12 col-lg-6 p-3 gx-3 box-custom align-self-start">
+                <h2 class="h3 ft-highlight">Développement Web</h2>
+                <p class="h4 w-100 my-4">Introduction au <span class="ft-highlight ft-bold">front-end</span> : <em>HTML & CSS</em></p>
+                <p class="h4 w-100 my-4">Initiation au <span class="ft-highlight ft-bold">web-design</span> : les tendances, les outils et notions d'UX/UI</p>
+                <p class="h4 w-100 my-4"><span class="ft-highlight ft-bold">Interactivité</span> des pages web avec <em>JavaScript</em></p>
+                <p class="h4 w-100 my-4">Installation et paramètrage d'un serveur Apache  pour la mise en place du <span class="ft-highlight ft-bold">back-end</span></p>
+                <p class="h4 w-100 my-4">Création, alimentation et consultation d'une <span class="ft-highlight ft-bold">base de données</span> avec <em>MySQL</em></p>
+                <p class="h4 w-100 my-4">Découverte de la programmation <span class="ft-highlight ft-bold">back-end</span> avec intégration des données grâce au <em>PHP</em></p>
+
+                <h2 class="h3 ft-highlight mt-5">Appronfondissement</h2>
+                <p class="h4 w-100 my-4">Découverte du <span class="ft-highlight ft-bold">game design</span> avec le moteur Unity</p>
+                <p class="h4 w-100 my-4">Mise en place du <span class="ft-highlight ft-bold">responsive design</span> avec le framework <em>Bootstrap</em></p>
+                <p class="h4 w-100 my-4">Sensibilisation à la <span class="ft-highlight ft-bold">Programmation Orientée Objet</span> en <em>JavaScript</em></p>
+
+            </div>
+            <div class="col-12 col-lg-5 p-3 mt-3 mt-lg-0 box-custom align-self-start">                
+
+                <h2 class="h3 ft-highlight">Les outils multimédia</h2>
+                <p class="h4 w-100 my-4"><span class="ft-highlight ft-bold">Modélisation 3D</span> avec <em>Blender</em></p>
+                <p class="h4 w-100 my-4">Outils de <span class="ft-highlight ft-bold">traitement d'image</span> (<em>Gimp et Inkscape</em>) pour enrichir le design web</p>
+                <p class="h4 w-100 my-4">Possibilité de découvrir le <span class="ft-highlight ft-bold">montage vidéo</span></p>
+
+                <img src="{{ asset('pictures/main/robots.jpg')}}" alt="robots" class="img-fluid">                                
+
+                <h2 class="h3 ft-highlight mt-3">IOT et réseau</h2>
+                <p class="h4 w-100 my-4">Initiation à l'<em>IOT</em> par un <span class="ft-highlight ft-bold">atelier robotique</span> avec des Mbot</p>
+                <p class="h4 w-100 my-4">Programmation de <span class="ft-highlight ft-bold">Microcontrôleurs Arduino</span> en <em>C++</em></p>
+                <p class="h4 w-100 my-4">Mise en place d'une <span class="ft-highlight ft-bold">Architecture réseau</span> avec <em>Sisko Packet Tracer</em></p>
+            </div>
+        </section>
+
+        <section class="intersection container-fluid" id="inter3"></section>
+
+        <section class="row justify-content-evenly p-lg-5 p-3 border-bottom border-top home-part" id="part3">
+
+            <h1 class="col-12 text-center h2 ft-bold mt-5">Construire son projet dans le numérique</h1>
+
+            <div class="col-12 col-lg-5 p-3 mt-3 box-custom align-self-start">
+                <h2 class="h3 ft-highlight">Travailler sur un projet numérique</h2>
+                <p class="h4 w-100 my-4">Prise en main d'un <span class="ft-highlight ft-bold">environnement Linux</span> (Ubuntu)</p>
+                <p class="h4 w-100 my-4">Préparer une <span class="ft-highlight ft-bold">maquette</span> et la présenter avec Figma</p>
+                 <p class="h4 w-100 my-4">Utiliser GitHub pour <span class="ft-highlight ft-bold">partager et collaborer</span> sur un projet numérique</p>
+
+                <img src="{{ asset('pictures/main/festNum.jpg')}}" alt="Fest Num 2023" class="img-fluid">
+                   
+            </div>
+
+            <div class="col-12 col-lg-6 p-3 mt-3 box-custom align-self-start">
+                <h2 class="h3 ft-highlight">Rencontrer des professionnels</h2>    
+                
+                    <p class="h4 w-100 my-4"><span class="ft-highlight ft-bold">Visites d'entreprises</span> : découvrir l'environnement, comprendre le rôle des différents acteurs et avoir une idée concrète des métiers.</p>
+                    <p class="h4 w-100 my-4">Intervention d'entreprise : Des rencontres dans nos locaux pour aborder différents thèmes par <span class="ft-highlight ft-bold">des professionnels passionnés</span> par leurs métiers : cybersécurité, développement d'applications... </p>
+                    <p class="h4 w-100 my-4">Stages : des périodes d'immersion en entreprise pour <span class="ft-highlight ft-bold">mettre en application vos compétences</span> et valider votre projet professionnel.</p>
+                    <p class="h4 w-100 my-4">Fest Num : <span class="ft-highlight ft-bold">Temps fort du parcours</span>, le Fest Num est un forum qui permet à tous les acteurs du parcours (entreprises, centres de formations, stagiaires) de se rencontrer.</p>
+
+                    <h2 class="h3 ft-highlight mt-3">Trouver sa formation</h2>
+                 <p class="h4 w-100 my-4">Découvrir <span class="ft-highlight ft-bold">les formations et les métiers</span> grâce à des visites, des présentations et des rencontres sur des forums</p>
+                 <p class="h4 w-100 my-4">Des <span class="ft-highlight ft-bold">entretiens individuels</span> réguliers pour définir vos objectis et mettre en place un plan d'action</p> 
+                
+            </div>
+
+
+        </section>
+
+        <section class="intersection container-fluid" id="inter4"></section>
+
+        <section class="row justify-content-center p-lg-5 p-3 border-bottom border-top home-part" id="part1">
+            <h1 class="col-12 text-center h2 ft-bold mt-5">Projets réalisés par les stagiaires</h1>
+
+            <div class="col-12 col-lg-10 p-3 mt-3 box-custom align-self-start">
+                <div id="carouselExampleIndicators" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="container-fluid p-lg-5 p-1">
+                                <div class="row justify-content-center carousel-box">
+                                    <h2 class="col-12 text-center ft-highlight mb-4">Stéphane : une encyclopédie Pokémon</h2>
+                                    <div class="col-lg-2 col-8 align-self-center">
+                                        <img src=" {{ asset ('pictures/workshopCar/stephane.jpg')}}" alt="Stéphane" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-6 col-12 align-self-center">
+                                        <p class="h4-lg">Stéphane a rejoint l'E2C après avoir interrompu un BTS. Son but était de se former au développelement et de trouver une formation plus concrète.</p>
+                                        <p class="h4-lg p-2">La prépa numérique lui a permis de découvrir le développement web et il continue dans cette voie au sein de la Web Academy à Epitech.</p>
+                                        <p class="h4-lg">Son projet lui a permis de faire ses premières armes avec le langage PHP.</p>
+                                    </div>
+                                    <div class="col-lg-2 col-8 align-self-center">
+                                        <a href="https://svaillant.misterbear.fr" target="_blank"><img src=" {{ asset ('pictures/workshopCar/pokeSite.jpg')}}" alt="Site Pokémon" class="img-fluid"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="container-fluid p-lg-5 p-1">
+                                <div class="row justify-content-center carousel-box">
+                                    <h2 class="col-12 text-center ft-highlight mb-4">Lorenzo : passion foot pour le Bayern</h2>
+                                    <div class="col-lg-2 col-8 align-self-center">
+                                        <img src=" {{ asset ('pictures/workshopCar/lorenzo.jpg')}}" alt="Lorenzo" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-5 col-12 align-self-center">
+                                        <p class="h4-lg">Lorenzo était complétement débutant quand il a intégré la Prépa Numérique pour découvrir ce domaine qui l'intéressait.</p>
+                                        <p class="h4-lg p-2">Il s'est plongé dans les langages Front End, sa curiosité et sa persévérance l'ont amené jusqu'à l'entretien de sélection de la Web Academy à Epitech qu'il a intégré en novembre 2023.</p>
+                                        <p class="h4-lg">Son site sur l'équipe du Bayern lui a permis de développer ses compétences en CSS.</p>
+                                    </div>
+                                    <div class="col-lg-3 col-10 align-self-center">
+                                        <a href="https://lorfao.misterbear.fr" target="_blank"><img src=" {{ asset ('pictures/workshopCar/bayeSite.jpg')}}" alt="Site Bayern" class="img-fluid"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="container-fluid p-lg-5 p-1">
+                                <div class="row justify-content-center carousel-box">
+                                    <h2 class="col-12 text-center ft-highlight mb-4">Louis : son premier jeu vidéo</h2>
+                                    <div class="col-lg-2 col-8 align-self-center">
+                                        <img src=" {{ asset ('pictures/workshopCar/louis.jpg')}}" alt="Louis" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-5 col-12 align-self-center">
+                                        <p class="h4-lg">Louis a fait une formation en image de synthèse en Belgique avant de rejoindre la prépa numérique</p>
+                                        <p class="h4-lg p-2">Passionné de développement de jeux, il s'est attelé à prendre en main le moteur de jeu Unity3D et le langage C#. Il est aujourd'hui en formation de Game Development au sein de 3 Axes à Tourcoing.</p>
+                                        <p class="h4-lg">Son projet est un petit jeu vidéo où il a mis à profit ses talents de créateur 3D.</p>
+                                    </div>
+                                    <div class="col-lg-3 col-10 align-self-center">
+                                        <a href="https://lsouba.misterbear.fr" target="_blank"><img src=" {{ asset ('pictures/workshopCar/jvSite.jpg')}}" alt="Site Jeu vidéo" class="img-fluid"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="container-fluid p-lg-5 p-1">
+                                <div class="row justify-content-center carousel-box">
+                                    <h2 class="col-12 text-center ft-highlight mb-4">Albéric : tout savoir sur Resident Evil</h2>
+                                    <div class="col-lg-2 col-8 align-self-center">
+                                        <img src=" {{ asset ('pictures/workshopCar/alberic.jpg')}}" alt="Alberic" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-5 col-12 align-self-center">
+                                        <p class="h4-lg">Albéric est venu à l'E2C avec une passion pour les jeux vidéo et une envie de découvrir le codage.</p>
+                                        <p class="h4-lg p-2">Son projet à long terme est de travailler dans le développement de jeux vidéos, il souhaite donc d'abord se former dans le développement web et a intégré Epitech dans ce but.</p>
+                                        <p class="h4-lg">Son projet de site lui a permis de balayer les différents aspects du web, avec du JavaScript et du PHP.</p>
+                                    </div>
+                                    <div class="col-lg-3 col-10 align-self-center">
+                                        <a href="https://adelmotte.misterbear.fr" target="_blank"><img src=" {{ asset ('pictures/workshopCar/reSite.jpg')}}" alt="Site Resident Evil" class="img-fluid"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="container-fluid p-lg-5 p-1">
+                                <div class="row justify-content-center carousel-box">
+                                    <h2 class="col-12 text-center ft-highlight mb-4">Groupe Prépa Num 2023-2024 du site de Lille</h2>
+                                    <div class="col-10 col-lg-3 align-self-center">
+                                        <img src=" {{ asset ('pictures/workshopCar/pnlille2024.jpg')}}" alt="Groupe PN Lille 2024" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-5 col-12 align-self-center">
+                                        <p class="h4-lg">Lors de la journée de clôture, le groupe de la prépa numérique de Lille a relevé le défi de créer une page pour présenter leurs différents projets. 3 équipes ont eu 1h30 pour réaliser une page et voici le site qui a remporté le défi.</p>
+                                        <p class="h4-lg p-2">Ce portail permet de découvrir différents projets, la plupart encore en cours, mais qui met en avant la diversité des compétences développées par les stagiaires : front-end, back-end, design, modélisation 3D...</p>
+                                    </div>
+                                    <div class="col-lg-2 col-8 align-self-center">
+                                        <a href="https://pn2023lille.misterbear.fr/" target="_blank"><img src=" {{ asset ('pictures/workshopCar/pnlilleSite.jpg')}}" alt="" class="img-fluid"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            
+            </div>
+
+        </section>
+    </div>
+{% endblock %}

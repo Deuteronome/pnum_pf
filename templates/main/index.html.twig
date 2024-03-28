@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block main %}
+    <div class="container-fluid p-0" >
+        <section class="row align-items-center p-lg-5 p-3 border-bottom border-top home-part" id="part1">
+            <div class="col-12 col-lg-7 p-3 box-custom">
+                <h1 class="h2 ft-bold">Pourquoi la prépa Numérique?</h1>
+                <p class="h4 w-100 text-end my-4 me-5 pe-5">Découvrir les <span class="ft-highlight ft-bold">métiers</span>  du domaine</p>
+                <p class="h4 w-100 text-end my-4 me-5 pe-5">Monter en <span class="ft-highlight ft-bold">compétences</span></p>
+                <p class="h4 w-100 text-end my-4 me-5 pe-5">Construire son <span class="ft-highlight ft-bold">parcours</span> de réussite</p>
+                <p class="h4 w-100 text-end my-4 me-5 pe-5">Trouver sa <span class="ft-highlight ft-bold">voie</span></p>
+
+                <h1 class="h2 ft-bold">Comment?</h1>
+                <p class="h4 w-100 text-start my-4 ms-4">Des <span class="ft-highlight ft-bold">ateliers thématiques</span> pour monter en compétences</p>
+                <p class="h4 w-100 text-start my-4 ms-4">Des rencontres avec des <span class="ft-highlight ft-bold">professionnels</span> et des <span class="ft-highlight ft-bold">centres de formation</span></p>
+                <p class="h4 w-100 text-start my-4 ms-4">L'expertise de l'E2C pour affiner le <span class="ft-highlight ft-bold">projet professionnel</span></p>
+                <p class="h4 w-100 text-start my-4 ms-4">Des <span class="ft-highlight ft-bold">stages en entreprises</span> pour se confronter à la réalité des métiers</p>
+                <p class="h4 w-100 text-start my-4 ms-4">Le développement des <span class="ft-highlight ft-bold">compétences transversales</span> grâce au workshop</p>
+                <div class="text-end">
+                    <a href="{{ path('app_program')}}" target="_self" class="btn btn-lg m-3 btn-custom">Voir le programme</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-5 p-4">
+                <iframe class="pn-video" src="https://www.youtube.com/embed/Eb0e04zjvpY?si=q8GGPS_FbbEtPO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="intersection container-fluid" id="inter1"></section>
+
+        <section class="row align-items-center p-lg-5 p-3 border-bottom border-top home-part" id="part2">
+            <div class="col-12 col-lg-5 p-4">
+                <iframe class="pn-video" src="https://www.youtube.com/embed/-OWXAVX_-vg?si=E5E4LgT6X6dk1LQW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-12 col-lg-7 p-3 box-custom">
+                <h1 class="h2 ft-bold">Bénéficier du suivi E2C</h1>
+                <p class="h4 w-100 text-start my-4 ms-4">Un parcours <span class="ft-highlight ft-bold">individualisé</span> avec votre <span class="ft-highlight ft-bold">référent</span> attitré</p>
+                <p class="h4 w-100 text-start my-4 ms-4">Des outils pédagogiques pour consolider votre <span class="ft-highlight ft-bold">projet professionnel</span></p>
+                <p class="h4 w-100 text-start my-4 ms-4">Des <span class="ft-highlight ft-bold">stages</span> pour confirmer vos compétences et construire votre <span class="ft-highlight ft-bold">réseau</span></p>
+                <p class="h4 w-100 text-start my-4 ms-4">Un <span class="ft-highlight ft-bold">suivi</span> qui se poursuit après votre départ de l'E2C</p>
+
+                <h1 class="h2 ft-bold">Être acteur de sa réussite</h1>
+                <p class="h4 w-100 text-end my-4 me-5 pe-5">Avec des ateliers de <span class="ft-highlight ft-bold">connaissance de soi</span> ou de <span class="ft-highlight ft-bold">découverte des métiers</span></p>
+                <p class="h4 w-100 text-end my-4 me-5 pe-5">Avec un programme de remise à niveau construit à partir de <span class="ft-highlight ft-bold">vos besoins</span></p>
+                <p class="h4 w-100 text-end my-4 me-5 pe-5">Grâce à des rencontres avec des <span class="ft-highlight ft-bold">professionnels</span> qui vous entraine à trouver des stages et un emploi</p>
+                <p class="h4 w-100 text-end my-4 me-5 pe-5">Avec des <span class="ft-highlight ft-bold">projets collectifs</span> qui mettent en valeur vos <span class="ft-highlight ft-bold">compétences</span></p>
+                <a href="https://e2c-grandlille.fr/" target="_blank" class="btn btn-lg m-3 btn-custom">En savoir plus</a>
+            </div>
+        </section>
+
+        <section class="intersection container-fluid" id="inter2"></section>
+
+        <section class="row align-items-center p-lg-5 p-3 border-bottom border-top home-part" id="part3">
+            <div class="col-12 col-lg-7 p-3 box-custom">
+                <h1 class="h2 ft-bold">La prochaine Prépa Numérique</h1>
+                <p class="h4 w-100 text-start my-4 ms-4 pe-4">La prochaine Prépa Numérique aura lieu au sein du site de Roubaix.</p>
+                <p class="h4 w-100 text-start my-4 ms-4 pe-4"><span class="ft-highlight ft-bold">Date du parcours </span>: du 27/05/2024 au 20/09/2024</p>
+                <p class="h4 w-100 text-start my-4 ms-4 pe-4"><span class="ft-highlight ft-bold">Adesse </span>: 45 boulevard du général Leclerc, 59100 ROUBAIX</p>
+                <p class="h4 w-100 text-start mt-4 ms-4 pe-4"><span class="ft-highlight ft-bold">Les Réunions d'Information (RIC) </span>se dérouleront toutes sur le site de Roubaix</p>
+                <ul class="mb-4">
+                    <li class="h5 ms-5">le 23/04/2024 à 15h00</li>
+                    <li class="h5 ms-5">le 30/04/2024 à 15h00</li>
+                    <li class="h5 ms-5">le 07/05/2024 à 15h00</li>
+                    <li class="h5 ms-5">le 21/05/2024 à 15h00</li>
+                </ul>
+                <p class="h4 w-100 text-start my-4 ms-4"><span class="ft-highlight ft-bold">Vous avez des questions </span>: contactez-nous au 03 28 07 59 80</p>                
+            </div>
+
+            <div class="col-12 col-lg-5 p-4 d-flex flex-column align-items-center">
+                <div class="d-flex justify-content-center align-items-center join-box mb-4">
+                    <p id="join">Rejoignez nous!</p>
+                </div>
+
+                <a href="{{ path('app_ric')}}" target="_self" class="btn btn-lg btn-custom ">Participer à une RIC</a>
+            </div>
+        </section>
+    </div>
+{% endblock %}

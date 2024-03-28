@@ -1,0 +1,16 @@
+<h2>Inscription à une RIC</h2>
+
+<ul>
+    <li>Prénom : {{data.name}}</li>
+    <li>Nom : {{data.lastname}}</li>
+    <li>Date de naissance : {{data.birthDate | date("d/m/Y")}}</li>
+    <li>Ville: {{data.city}}</li>
+    <li>email : {{data.mail}}</li>
+    <li>Téléphone : {{data.phone}}</li>
+    <li>RIC choisie : {{data.ricDate}}</li>
+    
+</ul>
+
+{% if data.message is not empty %}
+    <p><strong>Message : </strong></br> {{data.message | nl2br }}</p>
+{% endif %}
