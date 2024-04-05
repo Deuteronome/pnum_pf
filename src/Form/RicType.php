@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\RicParticipant;
 use DateTimeImmutable;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -60,6 +61,82 @@ class RicType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('prescriber', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control mb-2'
+                ],
+                'label' => 'Structure prescriptrice',
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Champ obligatoire',
+                    ]),
+                ],
+            ])
+            ->add('birthDate', DateType::class, [
+                'widget' => 'single_text',
+                'attr' => [
+                    'class' => 'form-control mb-2'
+                ],
+                'label' => 'Date de naissance',
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Champ obligatoire',
+                    ]),
+                ],
+            ])
+            ->add('birthCity', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control mb-2'
+                ],
+                'label' => 'Lieu de naissance',
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Champ obligatoire',
+                    ]),
+                ],
+            ])
+            ->add('schoolLevel', ChoiceType::class, [
+                'choices' => [
+                    'Classe primaire ou non scolarisé'=>'Classe primaire ou non scolarisé',
+                    '6ème ou 5ème collège'=>'6ème ou 5ème collège',
+                    '4ème ou 3ème collège'=>'4ème ou 3ème collège',
+                    '3ème inachevée' => '3ème inachevée',
+                    '1ère année de CAP/BEP'=>'1ère année de CAP/BEP',
+                    'Dernière année de CAP/BEP'=> 'Dernière année de CAP/BEP',
+                    '2nde ou 1ère lycée'=>'2nde ou 1ère lycée',
+                    'Terminale (BAC ou BAC PRO)'=>'Terminale (BAC ou BAC PRO)',
+                    'autre' => 'autre'
+                ],
+                'attr' => [
+                    'class' => 'form-control mb-2'
+                ],
+                'label' => 'Dernière classe fréquentée',
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Champ obligatoire',
+                    ]),
+                ],
+            ])
+            ->add('grade', textType::class, [
+                'attr' => [
+                    'class' => 'form-control mb-2'
+                ],
+                'label' => 'Diplôme préparé',
+                'required'=>false,
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Champ obligatoire',
+                    ]),
+                ],
+            ])
+            ->add('is_got', CheckboxType::class, [
+                'attr' => [
+                    'class' => 'form-check-input mb-4 mx-3'
+                ],
+                'label' => 'Diplôme obtenu',
+                'required'=>false,
+                
+            ])
             ->add('mail', EmailType::class, [
                 'attr' => [
                     'class' => 'form-control mb-2'
@@ -82,23 +159,33 @@ class RicType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('city', TextType::class, [
+            ->add('adress', TextType::class, [
                 'attr' => [
                     'class' => 'form-control mb-2'
                 ],
-                'label' => 'Ville de résidence',
+                'label' => 'Adresse',
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Champ obligatoire',
                     ]),
                 ],
             ])
-            ->add('birthDate', DateType::class, [
-                'widget' => 'single_text',
+            ->add('zipCode', TextType::class, [
                 'attr' => [
                     'class' => 'form-control mb-2'
                 ],
-                'label' => 'Date de naissance',
+                'label' => 'Code postal',
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Champ obligatoire',
+                    ]),
+                ],
+            ])
+            ->add('city', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control mb-2'
+                ],
+                'label' => 'Ville',
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Champ obligatoire',

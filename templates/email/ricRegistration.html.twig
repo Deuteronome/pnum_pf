@@ -3,7 +3,22 @@
 <ul>
     <li>Prénom : {{data.name}}</li>
     <li>Nom : {{data.lastname}}</li>
+    <li>Structure prescriptrice : {{data.prescriber}}</li>
+    <br/>
     <li>Date de naissance : {{data.birthDate | date("d/m/Y")}}</li>
+    <li>Lieu de naissance : {{data.birthCity}}</li>
+    <br/>
+    <li>Dernière classe fréquentée : {{data.schoolLevel}}</li>
+    <li>Diplôme : {{data.grade}} (
+        {% if data.isGot %}
+        obtenu
+        {% else %}
+        non obtenu
+        {% endif %}        
+    )</li>
+    <br/>
+    <li>Adresse: {{data.adress}}</li>
+    <li>Code postal: {{data.zipCode}}</li>
     <li>Ville: {{data.city}}</li>
     <li>email : {{data.mail}}</li>
     <li>Téléphone : {{data.phone}}</li>

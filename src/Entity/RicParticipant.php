@@ -41,9 +41,32 @@ class RicParticipant
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $message = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $adress = null;
+
+    #[ORM\Column(length: 10)]
+    private ?string $zipCode = null;
+
+    #[ORM\Column(length: 150)]
+    private ?string $schoolLevel = null;
+
+    #[ORM\Column(length: 150)]
+    private ?string $prescriber = null;
+
+    #[ORM\Column(length: 50)]
+    private ?string $grade = null;
+
+    #[ORM\Column]
+    private ?bool $is_got = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $birthCity = null;
+
     public function __construct()
     {
         $this->created_at = new \DateTimeImmutable();
+        $this->prescriber = "en direct";
+        $this->grade = "aucun";
     }
 
     public function getId(): ?int
@@ -155,6 +178,90 @@ class RicParticipant
     public function setMessage(?string $message): static
     {
         $this->message = $message;
+
+        return $this;
+    }
+
+    public function getAdress(): ?string
+    {
+        return $this->adress;
+    }
+
+    public function setAdress(string $adress): static
+    {
+        $this->adress = $adress;
+
+        return $this;
+    }
+
+    public function getZipCode(): ?string
+    {
+        return $this->zipCode;
+    }
+
+    public function setZipCode(string $zipCode): static
+    {
+        $this->zipCode = $zipCode;
+
+        return $this;
+    }
+
+    public function getSchoolLevel(): ?string
+    {
+        return $this->schoolLevel;
+    }
+
+    public function setSchoolLevel(string $schoolLevel): static
+    {
+        $this->schoolLevel = $schoolLevel;
+
+        return $this;
+    }
+
+    public function getPrescriber(): ?string
+    {
+        return $this->prescriber;
+    }
+
+    public function setPrescriber(string $prescriber): static
+    {
+        $this->prescriber = $prescriber;
+
+        return $this;
+    }
+
+    public function getGrade(): ?string
+    {
+        return $this->grade;
+    }
+
+    public function setGrade(string $grade): static
+    {
+        $this->grade = $grade;
+
+        return $this;
+    }
+
+    public function isIsGot(): ?bool
+    {
+        return $this->is_got;
+    }
+
+    public function setIsGot(bool $is_got): static
+    {
+        $this->is_got = $is_got;
+
+        return $this;
+    }
+
+    public function getBirthCity(): ?string
+    {
+        return $this->birthCity;
+    }
+
+    public function setBirthCity(string $birthCity): static
+    {
+        $this->birthCity = $birthCity;
 
         return $this;
     }
