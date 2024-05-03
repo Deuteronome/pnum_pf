@@ -36,7 +36,11 @@ class RicRegistartionController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
+            if($form->get('applicationType')->getData() === 'en direct') {
+                $participant->setPrescribingStructure('en direct');
+            }
             $em->persist($participant);
+            
         try {
             $em->flush();
         } catch(Exception $e) {

@@ -25,6 +25,10 @@ class PnumProgramController extends AbstractController
                 "url" => "#part1"
             ],
             [
+                "label" => "Participer à une RIC",
+                "url" => $this->generateUrl('app_ric')
+            ],
+            [
                 "label" => "Retour à l'accueil",
                 "url" => $this->generateUrl('app_main')
             ],

@@ -61,16 +61,39 @@ class RicType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('prescriber', TextType::class, [
+            ->add('applicationType', ChoiceType::class , [
+                'mapped' => false,
+                'choices' => [
+                    'Candidature spontanée' => 'en direct',
+                    'Orienté par un structure' => 'prescrite'
+                ],
                 'attr' => [
-                    'class' => 'form-control mb-2'
+                    'class' => 'form-control mb-2',
+                ],
+                'label' => 'Type de candidature',
+                
+            ])
+            ->add('prescribingStructure', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control mb-2 d-none prescriber',
+                    
                 ],
                 'label' => 'Structure prescriptrice',
-                'constraints' => [
-                    new NotBlank([
-                        'message' => 'Champ obligatoire',
-                    ]),
+                'label_attr'=> [
+                    'class' => 'label-control d-none prescriber'
                 ],
+                'required' => false,                
+            ])
+            ->add('prescriber', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control mb-2 d-none prescriber',
+                    
+                ],
+                'label' => 'Nom du conseiller',
+                'label_attr'=> [
+                    'class' => 'label-control d-none prescriber'
+                ],
+                'required' => false,                
             ])
             ->add('birthDate', DateType::class, [
                 'widget' => 'single_text',

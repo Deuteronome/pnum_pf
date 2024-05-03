@@ -2,6 +2,11 @@
 
 {% block title %}RIC{% endblock %}
 
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('ricForm.js')}}" defer></script>
+{% endblock %}
+
 
 
 {% block main %}
@@ -13,6 +18,8 @@
                 {{ form_start(form) }}
                     {{ form_row(form.name) }}
                     {{ form_row(form.lastname) }}
+                    {{ form_row(form.applicationType) }}
+                    {{ form_row(form.prescribingStructure) }}
                     {{ form_row(form.prescriber) }}
                     {{ form_row(form.birthDate) }}
                     {{ form_row(form.birthCity) }}

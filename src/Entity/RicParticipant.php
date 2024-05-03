@@ -50,7 +50,7 @@ class RicParticipant
     #[ORM\Column(length: 150)]
     private ?string $schoolLevel = null;
 
-    #[ORM\Column(length: 150)]
+    #[ORM\Column(length: 150, nullable: true)]
     private ?string $prescriber = null;
 
     #[ORM\Column(length: 50)]
@@ -62,10 +62,12 @@ class RicParticipant
     #[ORM\Column(length: 255)]
     private ?string $birthCity = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $prescribingStructure = null;
+
     public function __construct()
     {
-        $this->created_at = new \DateTimeImmutable();
-        $this->prescriber = "en direct";
+        $this->created_at = new \DateTimeImmutable();        
         $this->grade = "aucun";
     }
 
@@ -262,6 +264,18 @@ class RicParticipant
     public function setBirthCity(string $birthCity): static
     {
         $this->birthCity = $birthCity;
+
+        return $this;
+    }
+
+    public function getPrescribingStructure(): ?string
+    {
+        return $this->prescribingStructure;
+    }
+
+    public function setPrescribingStructure(?string $prescribingStructure): static
+    {
+        $this->prescribingStructure = $prescribingStructure;
 
         return $this;
     }
