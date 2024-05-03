@@ -3,7 +3,19 @@
 <ul>
     <li>Prénom : {{data.name}}</li>
     <li>Nom : {{data.lastname}}</li>
-    <li>Structure prescriptrice : {{data.prescriber}}</li>
+
+    <br/>
+    {% if data.prescribingStructure == 'en direct'  %}
+
+        <li>Type de candidature : en direct</li>
+
+    {% else %}
+
+        <li>Type de candidature : prescrite</li>
+        <li>Structure prescriptrice : {{data.prescribingStructure}}</li>
+        <li>Conseiller(ère) : {{data.prescriber}}</li>   
+    {% endif %}
+    
     <br/>
     <li>Date de naissance : {{data.birthDate | date("d/m/Y")}}</li>
     <li>Lieu de naissance : {{data.birthCity}}</li>

@@ -24,6 +24,10 @@ class MainController extends AbstractController
                 "label" => "Infos pratiques",
                 "url" => "#part3"
             ],
+            [
+                "label" => "Participer à une RIC",
+                "url" => $this->generateUrl('app_ric')
+            ],
         ];
 
         return $this->render('main/index.html.twig', [
