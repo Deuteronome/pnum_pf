@@ -1,0 +1,12 @@
+<h2>Demande d'information</h2>
+
+<ul>
+    <li>Prénom : {{data.firstname}}</li>
+    <li>Nom : {{data.lastname}}</li>
+    <li>Email : {{data.email}}</li>
+    <li>Sattus : {{data.status}}</li>
+  
+
+{% if data.message is not empty %}
+    <p><strong>Message : </strong></br> {{data.message | nl2br }}</p>
+{% endif %}

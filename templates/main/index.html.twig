@@ -55,25 +55,31 @@
         <section class="row align-items-center p-lg-5 p-3 border-bottom border-top home-part" id="part3">
             <div class="col-12 col-lg-7 p-3 box-custom">
                 <h1 class="h2 ft-bold">La prochaine Prépa Numérique</h1>
-                <p class="h4 w-100 text-start my-4 ms-4 pe-4">La prochaine Prépa Numérique aura lieu au sein du site de Roubaix.</p>
-                <p class="h4 w-100 text-start my-4 ms-4 pe-4"><span class="ft-highlight ft-bold">Date du parcours </span>: du 27/05/2024 au 20/09/2024</p>
-                <p class="h4 w-100 text-start my-4 ms-4 pe-4"><span class="ft-highlight ft-bold">Adesse </span>: 45 boulevard du général Leclerc, 59100 ROUBAIX</p>
-                <p class="h4 w-100 text-start mt-4 ms-4 pe-4"><span class="ft-highlight ft-bold">Les Réunions d'Information (RIC) </span>se dérouleront toutes sur le site de Roubaix</p>
+                <p class="h4 w-100 text-start my-4 ms-4 pe-4">La prochaine Prépa Numérique aura lieu au sein du site de Lille.</p>
+                <p class="h4 w-100 text-start my-4 ms-4 pe-4"><span class="ft-highlight ft-bold">Date du parcours </span>: démarrage le 04/11/2024</p>
+                <p class="h4 w-100 text-start my-4 ms-4 pe-4"><span class="ft-highlight ft-bold">Adesse </span>: 48 rue des canonniers, 59000 LILLE</p>
+                <p class="h4 w-100 text-start mt-4 ms-4 pe-4"><span class="ft-highlight ft-bold">Les Réunions d'Information (RIC) </span>Les rencontres avec les candidats débuteront en septembre 2024, les dates de réunions collectives  ne sont pas encore définies.</p>
                 <ul class="mb-4">
-                    <li class="h5 ms-5">le 23/04/2024 à 15h00</li>
-                    <li class="h5 ms-5">le 30/04/2024 à 15h00</li>
-                    <li class="h5 ms-5">le 07/05/2024 à 15h00</li>
-                    <li class="h5 ms-5">le 21/05/2024 à 15h00</li>
+                    <!--
+                    <li class="h5 ms-5">le **/09/2024 à 15h00</li>
+                    <li class="h5 ms-5">le **/10/2024 à 15h00</li>
+                    <li class="h5 ms-5">le **/10/2024 à 15h00</li>
+                    <li class="h5 ms-5">le **/10/2024 à 15h00</li>
+                    -->
                 </ul>
                 <p class="h4 w-100 text-start my-4 ms-4"><span class="ft-highlight ft-bold">Vous avez des questions </span>: contactez-nous au 03 28 07 59 80</p>                
             </div>
 
             <div class="col-12 col-lg-5 p-4 d-flex flex-column align-items-center">
                 <div class="d-flex justify-content-center align-items-center join-box mb-4">
-                    <p id="join">Rejoignez nous!</p>
+                    <p id="join">Restez informé!</p>
                 </div>
-
-                <a href="{{ path('app_ric')}}" target="_self" class="btn btn-lg btn-custom ">Participer à une RIC</a>
+                {% if false  %} 
+                    <a href="{{ path('app_ric')}}" target="_self" class="btn btn-lg btn-custom ">Participer à une RIC</a>
+                {% else %}
+                    <a href="{{ path('app_warning_request')}}" target="_self" class="btn btn-lg btn-custom ">Etre informé du démarrage des candidatures</a>
+                {% endif %}
+                
             </div>
         </section>
     </div>

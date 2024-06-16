@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\RicParticipant;
+use App\Entity\WarningRequest;
 use App\Form\RicType;
+use App\Form\WarningRequestType;
 use DateTimeImmutable;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
@@ -84,6 +86,56 @@ class RicRegistartionController extends AbstractController
         }
         
         return $this->render('ric_registartion/index.html.twig', [
+            'navItems' => $navItems,
+            'form' => $form
+        ]);
+    }
+
+    #[Route('/info', name:'app_warning_request')]
+    public function warningRequest(Request $request, EntityManagerInterface $em, MailerInterface $mailer) : Response
+    {
+        $navItems = [
+            [
+                "label" => "Accueil",
+                "url" => $this->generateUrl('app_main')
+            ],
+            
+        ];
+
+        $warningRequest = new WarningRequest();
+
+        $form = $this->createForm(WarningRequestType::class, $warningRequest);
+        $form-> handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $em->persist($warningRequest);
+            try {
+                $em->flush();
+            } catch(Exception $e) {
+                $this->addFlash('danger', 'une erreur s\'est produite, veuillez réessayer ultérieurement');
+                return $this->redirectToRoute('app_main');
+            }
+
+            $emailAdmin = (new TemplatedEmail())
+                ->from('admin@prepanum.e2c-app-factory.fr')
+                ->to('o.burcker@e2c-grandlille.fr')
+                ->subject('demande d\'informations')
+                ->htmlTemplate('email/warningRequest.html.twig')
+                ->context(['data' => $warningRequest]);
+
+            try {
+                $mailer->send($emailAdmin);
+            } catch(TransportExceptionInterface $e) {
+                    
+            }
+
+            $this->addFlash('success', 'Vos coordonnées ont été enregistrées, vous serez prévenus quand les réunions seront programmées.');
+
+            return $this->redirectToRoute('app_main');
+        }
+        
+        return $this->render('ric_registartion/warning.html.twig', [
             'navItems' => $navItems,
             'form' => $form
         ]);
