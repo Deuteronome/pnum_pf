@@ -11,8 +11,7 @@ class MainController extends AbstractController
     #[Route('/', name: 'app_main')]
     public function index(): Response
     {
-        //test
-        $navItems = [
+            $navItems = [
             [
                 "label" => "Présentation",
                 "url" => "#part1"
