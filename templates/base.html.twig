@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}E2C - Prépa Num{% endblock %}</title>
+        <link rel="icon" href="{{ asset('pictures/main/logo.png')}}">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block navbar %}
+            {% include "./_module/_navbar.html.twig" %}
+        {% endblock %}
+        <main class="w-100">
+            {% block banner %}
+                {% include "./_module/_bannerMain.html.twig" %}
+            {% endblock %}
+            {% block main %}{% endblock %}
+            {% block footer %}
+                {% include "./_module/_footer.html.twig" %}
+            {% endblock %}
+        </main>
+        {% include "./_module/_flash.html.twig" %}
+    </body>
+</html>

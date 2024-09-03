@@ -1,0 +1,14 @@
+<p>Votre demande de particpation à une Réunion d'information collective pour la Prépa Numérique de l'E2C Grand Lille a bien été transmise<p>
+
+<p><strong>Détail de la demande : </strong></p>
+<ul>
+    <li>Prénom : {{data.name}}</li>
+    <li>Nom : {{data.lastname}}</li>    
+    <li>RIC choisie : {{data.ricDate}}</li>
+    <p>Les Réunions auront lieu à 15h00 sur le site de Roubaix, 45 boulevard du général Leclerc</p>
+    
+</ul>
+
+{% if data.message is not empty %}
+    <p><strong>Message : </strong></br> {{data.message | nl2br }}</p>
+{% endif %}

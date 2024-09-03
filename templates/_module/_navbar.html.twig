@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom navbar-custom w-100">
+  <div class="container-fluid">
+    <img src="{{ asset('pictures/main/logo.png')}}" class="nav-logo" alt="logo">
+        <div class="ms-3 nav-title">Prépa Numérique</div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 ms-auto mb-lg-0 ms-auto">
+        {% if navItems %}
+          {% for navItem in navItems %}
+            <li class="nav-item me-2">
+                <a class="nav-link text-dark" aria-current="page" href="{{navItem.url}}">{{navItem.label}}</a>
+            </li>
+          {% endfor %}                   
+                        
+        {% endif %}
+        <li class="nav-item me-2">
+          <a class="btn btn-dark" href="{{ path('app_in_progress')}}">Classroom Prépa-Num</a>
+        </li>        
+      </ul>      
+    </div>
+  </div>
+</nav>

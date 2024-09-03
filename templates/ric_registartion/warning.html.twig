@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}demande d'information{% endblock %}
+
+
+{% block main %}
+     <div class="container-fluid p-0" >
+        <section class="row justify-content-center align-items-center p-lg-5 p-3 border-bottom border-top home-part" id="part3">
+            <div class="col-12 col-lg-10 p-3 box-custom">
+                <h1 class="h1">Inscrivez vous pour une RIC</h1>
+                {{ form_errors(form) }}
+                {{ form_start(form) }}
+                {{ form_end(form) }}
+            </div>
+        </section>
+    </div>
+{% endblock %}
